@@ -42,14 +42,18 @@ function TodoList() {
 
   return (
     <>
-      <h1>What's the Plan for Today test?</h1>
+      <div className="info-wrapper">
+        <h1 className="info-title">What's the Plan for Today?</h1>
+      </div>
       <TodoForm onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        completeTodo={completeTodo}
-        removeTodo={removeTodo}
-        updateTodo={updateTodo}
-      />
+      <div className="todo-list-wrapper">
+        <Todo
+          todos={todos}
+          completeTodo={completeTodo}
+          removeTodo={removeTodo}
+          updateTodo={updateTodo}
+        />
+      </div>
     </>
   );
 }
